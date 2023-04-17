@@ -67,3 +67,6 @@ jobs:
         force-overwrite: true
         publish-changes: true
         run-asynchronously: true
+        use-deployment-settings-file: true
+        deployment-settings-file: zyrallagas/D365-POC/.github/workflows/deploymentsettingsfile.json@main
+        
