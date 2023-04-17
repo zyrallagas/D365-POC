@@ -1,0 +1,66 @@
+name: eql_cmx_portal_cicd_main_pipeline.yml
+
+run-name: Triggered by @${{ github.actor }}
+
+on:
+  release:
+    types: [created]
+    
+  workflow_dispatch:
+  
+
+jobs:
+  build:
+    strategy:
+      max-parallel: 1
+      matrix:
+        target: [POC20]
+    uses: zyrallagas/D365-POC/.github/workflows/eql_cmx_portal_cicd_export_from_dev_pipeline.yml@main
+    with:      
+      solution_name: ${{ matrix.target }}
+      branch_name: solution
+      solution_exported_folder: out/exported/
+      solution_folder: out/solutions/
+      solution_target_folder: solutions/
+    secrets: 
+      dev_url: ${{ secrets.dev_url }}
+      dev_client_id: ${{ secrets.dev_client_id }}
+      dev_tenant_id: ${{ secrets.dev_tenant_id }}  
+      dev_secrets_id: ${{ secrets.dev_secrets_id }}
+          
+  release-to-build-env:
+    strategy:
+        max-parallel: 1
+        matrix:
+          target: [POC20]
+    needs: [ build ]
+    uses: zyrallagas/D365-POC/.github/workflows/eql_cmx_portal_cicd_release_pipeline_to_build_env.yml@main
+    with:
+      solution_name: ${{ matrix.target }}
+      branch_name: solution
+      solution_shipping_folder: out/ship/
+      solution_outbound_folder: out/solutions/
+      solution_source_folder: solutions/
+      solution_release_folder: out/release
+    secrets:
+      build_url: ${{ secrets.build_url }}
+      build_client_id: ${{ secrets.build_client_id }}
+      build_secrets_id: ${{ secrets.build_secrets_id }}
+      build_tenant_id: ${{ secrets.build_tenant_id }}
+         
+  release-to-sit-env:
+    strategy:
+      max-parallel: 1
+      matrix:
+        target: [POC20]
+    needs: [ release-to-build-env ]
+    uses: zyrallagas/D365-POC/.github/workflows/eql_cmx_portal_cicd_release_pipeline_to_sit_env.yml@main
+    with:
+      solution_name: ${{ matrix.target }}
+      solution_release_folder: out/release
+    secrets:
+      sit_url: ${{ secrets.sit_url }}
+      sit_client_id: ${{ secrets.sit_client_id }}
+      sit_secrets_id: ${{ secrets.sit_secrets_id }}
+      sit_tenant_id: ${{ secrets.sit_tenant_id }}
+    
