@@ -68,5 +68,5 @@ jobs:
         publish-changes: true
         run-asynchronously: true
         use-deployment-settings-file: true
-        deployment-settings-file: zyrallagas/D365-POC/.github/workflows/deploymentsettingsfile.json
+        deployment-settings-file: /.github/workflows/deploymentsettingsfile.json
         
