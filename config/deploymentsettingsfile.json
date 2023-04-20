@@ -11,7 +11,11 @@
       {
         "SchemaName": "poc_SampleEV3",
         "Value": "sit-value-3"
-      }
+      },
+        {
+        "SchemaName": "poc_SampleEV3",
+        "Value": "sit"
+      } 
     ]
 
   }
