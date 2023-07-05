@@ -14,7 +14,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        target: [POC20]
+        target: [Solution10]
     uses: zyrallagas/D365-POC/.github/workflows/eql_cmx_portal_cicd_export_from_dev_pipeline.yml@main
     with:      
       solution_name: ${{ matrix.target }}
@@ -32,7 +32,7 @@ jobs:
     strategy:
         max-parallel: 1
         matrix:
-          target: [POC20]
+          target: [Solution10]
     needs: [ build ]
     uses: zyrallagas/D365-POC/.github/workflows/eql_cmx_portal_cicd_release_pipeline_to_build_env.yml@main
     with:
@@ -52,7 +52,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        target: [POC20]
+        target: [Solution10]
     needs: [ release-to-build-env ]
     uses: zyrallagas/D365-POC/.github/workflows/eql_cmx_portal_cicd_release_pipeline_to_sit_env.yml@main
     with:
