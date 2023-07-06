@@ -132,27 +132,7 @@ jobs:
         env:
             GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
             
-      - name: download check-solution logs
-        uses: actions/download-artifact@v2
-        with:
-          name: ${{ inputs.solution_name }}
-          path: logs/${{ inputs.solution_name }}
-          
-      - name: push check-solution logs to branch
-        run: |
-          git --version
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
-          git fetch --no-tags --prune --depth=1 origin
-          git checkout develop
-          mkdir ${{ inputs.solution_target_folder}}/${{ inputs.solution_name }}/logs
-          copy logs/${{ inputs.solution_name }} ${{ inputs.solution_target_folder}}/${{ inputs.solution_name }}/logs
-          git add logs
-          git pull origin
-          git commit -m "Added Logs to branch"
-          git push
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+     
 
       - name: Display structure of downloaded files
         run: ls -R
