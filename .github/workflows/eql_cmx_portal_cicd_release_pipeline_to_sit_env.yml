@@ -67,6 +67,5 @@ jobs:
         force-overwrite: true
         publish-changes: true
         run-asynchronously: true
-        use-deployment-settings-file: true
-        deployment-settings-file: config/deploymentsettingsfile.json
+
         
