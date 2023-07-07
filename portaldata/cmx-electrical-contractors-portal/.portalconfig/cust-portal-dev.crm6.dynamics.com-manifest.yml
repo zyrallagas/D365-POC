@@ -14,6 +14,10 @@ adx_adplacement_ad:
   CheckSum: d8059a5a65c1716a8e222d71f64bc7b2161b22a86b5104ca89cfa0dd325d580a
   IsDeleted: false
 adx_contentsnippet:
+- RecordId: 42fe84d3-741c-ee11-9cbc-002248e35886
+  DisplayName: sample snippet
+  CheckSum: a5d6a1f0bfa97c51797413a10c7d874d4ba05e1c3546efc530298a871e8330cf
+  IsDeleted: false
 - RecordId: 69d94843-c81b-ee11-9cbc-002248e35886
   DisplayName: Account/Signin/SignInExternalDeprecatedFormHeading
   CheckSum: 79e096b7b864641ddf9f2d935a75b86eae8d0b4c6059978681e3bd4d9c082f53
