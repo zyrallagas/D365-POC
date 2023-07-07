@@ -382,6 +382,18 @@ adx_contentsnippet:
   DisplayName: Profile/MarketMail
   CheckSum: 3593547725ba85271e1f759551f579ea71b7f7edd0570e7bd74cfbf9a29c75c2
   IsDeleted: false
+- RecordId: e60e0512-601c-ee11-9cbc-002248e35886
+  DisplayName: Logo URL
+  CheckSum: 7b9b167f9a9c504d04eded266a8e1b1a54b2bdc5bac4c1f14fcc70b0734e4ba7
+  IsDeleted: false
+- RecordId: e70e0512-601c-ee11-9cbc-002248e35886
+  DisplayName: Logo alt text
+  CheckSum: 7fa70cfd86efd17cce62d88ee03412f9a0ec81089f90d8a55c56fc4af014e894
+  IsDeleted: false
+- RecordId: e80e0512-601c-ee11-9cbc-002248e35886
+  DisplayName: Site name
+  CheckSum: cc23b1273c548a69bb05e91991afb46c3d21cc418e9487c30c1a0eb30dc077c3
+  IsDeleted: false
 adx_entityform:
 - RecordId: 8ed45149-c81b-ee11-9cbc-002248e35886
   DisplayName: simple contact us form
@@ -1052,6 +1064,10 @@ adx_websitelanguage:
   CheckSum: fca6521b50a6365d5ff15d7ddd4fd76a42c656d11dfa5ce666e38ed7aec32691
   IsDeleted: false
 adx_webtemplate:
+- RecordId: 4bcc900b-601c-ee11-9cbc-002248e35886
+  DisplayName: Power Virtual Agents
+  CheckSum: 828a15b3122e288dc71f61111d14ad08b47c3e1615b1f8ad1c49d13e2ac3d155
+  IsDeleted: false
 - RecordId: 5cd45149-c81b-ee11-9cbc-002248e35886
   DisplayName: Default studio template
   CheckSum: f1243f106858926a5adabf43fecdb8b93d2b1c5e5e4e6cc60bd0d85451caab15
