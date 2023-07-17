@@ -99,6 +99,8 @@ jobs:
   portal-data-to-sit-env:
       needs: [ release-to-sit-env ]
       uses: zyrallagas/D365-POC/.github/workflows/eql_cmx_portal_cicd_transport_portal_data_pipeline_to_sit_env.yml@main
+      with:
+        portal_name: cmx-electrical-contractors-portal
       secrets:
         website_id: ${{ secrets.website_id }} 
         build_url: ${{ secrets.build_url }}
