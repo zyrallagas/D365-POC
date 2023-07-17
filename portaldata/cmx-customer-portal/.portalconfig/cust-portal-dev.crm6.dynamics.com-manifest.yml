@@ -142,6 +142,10 @@ adx_contentsnippet:
   DisplayName: Profile/SecurityNav/ChangeEmail
   CheckSum: 3cbd1549d8116149909f4470a445428d231b49b7107991ecfecad699f9f5ccb3
   IsDeleted: false
+- RecordId: 6a012a59-7824-ee11-9965-002248e35886
+  DisplayName: content snippet for Customer Portal
+  CheckSum: c3127129539d8a2c46a6792620c1d146d5c0858c0f809c223ef393e77ab07ae9
+  IsDeleted: false
 - RecordId: 79e2ebc4-741c-ee11-9cbc-002248e35886
   DisplayName: sample content snippet
   CheckSum: 9654b0b03f9cd42f9265e3facd57c7173569201172cf7cec774ba09ee0d1e88c
