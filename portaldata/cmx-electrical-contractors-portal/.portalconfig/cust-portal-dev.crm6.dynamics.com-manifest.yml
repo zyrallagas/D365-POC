@@ -18,6 +18,10 @@ adx_contentsnippet:
   DisplayName: sample snippet
   CheckSum: a5d6a1f0bfa97c51797413a10c7d874d4ba05e1c3546efc530298a871e8330cf
   IsDeleted: false
+- RecordId: 4e0ca768-7824-ee11-9965-002248e35886
+  DisplayName: content snippet for Electrical Portal
+  CheckSum: 4c20a250b646a25ce35b932bc6ca79d4e52a33287be72bc40dca705acdae0f9c
+  IsDeleted: false
 - RecordId: 69d94843-c81b-ee11-9cbc-002248e35886
   DisplayName: Account/Signin/SignInExternalDeprecatedFormHeading
   CheckSum: 79e096b7b864641ddf9f2d935a75b86eae8d0b4c6059978681e3bd4d9c082f53
