@@ -98,3 +98,4 @@ jobs:
         client-secret: ${{ secrets.sit_secrets_id }}
         tenant-id: ${{ secrets.sit_tenant_id }}
         upload-path: portaldata/${{ inputs.portal_name }}
+        website-id:  ${{ secrets.customer_website_id }} 
