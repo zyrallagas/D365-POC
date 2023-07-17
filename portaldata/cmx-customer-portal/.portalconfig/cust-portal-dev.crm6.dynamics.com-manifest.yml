@@ -66,6 +66,10 @@ adx_contentsnippet:
   DisplayName: Search/Facet/All
   CheckSum: 2469169fd69654a1de37f678a311c60760774a67a41763b6c539f7b055e0c2d5
   IsDeleted: false
+- RecordId: 0db8b595-9324-ee11-9965-002248e35886
+  DisplayName: CP
+  CheckSum: e264330275292c8315cc05710fd4aa3b63b9ae20b1215e7fa8ea3f1ba3e12b96
+  IsDeleted: false
 - RecordId: 0df49c1a-c81b-ee11-9cbc-002248e35886
   DisplayName: Account/SetPassword/Username
   CheckSum: 8ffcd48bf404d1e407bdf4267be65159c582f9fb714e8544fa98969ee8a586e1
