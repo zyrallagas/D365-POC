@@ -56,7 +56,7 @@ jobs:
         app-id: ${{ secrets.build_client_id }}
         client-secret: ${{ secrets.build_secrets_id }}
         tenant-id: ${{ secrets.build_tenant_id }}
-        download-path: portaldata
+        download-path: portaldata/${{ inputs.portal_name }}
         website-id:  ${{ secrets.customer_website_id }} 
         overwrite: true
 
