@@ -38,7 +38,7 @@ on:
         
 
 jobs:
-  download-portal-data-from-build-env:
+  download-customer-portal-data-from-build-env:
     runs-on:  ubuntu-latest
     environment: build
     env:
@@ -67,7 +67,7 @@ jobs:
         path: portaldata/cmx-customer-portal
         
   upload-portal-data-to-sit-env:
-    needs: [ download-portal-data-from-build-env ]
+    needs: [ download-customer-portal-data-from-build-env ]
     runs-on:  ubuntu-latest
     environment: sit
     env:
