@@ -2,6 +2,11 @@ name: eql_cmx_portal_cicd_transport_customer_portal_data_pipeline_to_sit_env.yml
 
 on:
   workflow_call :
+    inputs:
+      portal_name:
+        description: 'name of the portal'
+        required: true
+        type: string
     secrets:
       build_url:
         description: 'portal_data environment url.'
@@ -92,4 +97,4 @@ jobs:
         app-id: ${{ secrets.sit_client_id }}
         client-secret: ${{ secrets.sit_secrets_id }}
         tenant-id: ${{ secrets.sit_tenant_id }}
-        upload-path: portaldata
+        upload-path: portaldata/${{ inputs.portal_name }}
