@@ -394,6 +394,10 @@ adx_contentsnippet:
   DisplayName: Profile/MarketMail
   CheckSum: 3593547725ba85271e1f759551f579ea71b7f7edd0570e7bd74cfbf9a29c75c2
   IsDeleted: false
+- RecordId: db4a0aa5-9324-ee11-9965-002248e35886
+  DisplayName: EC
+  CheckSum: fb3d6c63564d3bcc62a60c400ecaeedb4d1afd080fa1f6aa71d873fd62dc6296
+  IsDeleted: false
 - RecordId: e60e0512-601c-ee11-9cbc-002248e35886
   DisplayName: Logo URL
   CheckSum: 7b9b167f9a9c504d04eded266a8e1b1a54b2bdc5bac4c1f14fcc70b0734e4ba7
