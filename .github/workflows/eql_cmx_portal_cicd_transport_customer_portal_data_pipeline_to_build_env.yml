@@ -57,7 +57,7 @@ jobs:
         app-id: ${{ secrets.dev_client_id }}
         client-secret: ${{ secrets.dev_secrets_id }}
         tenant-id: ${{ secrets.dev_tenant_id }}
-        download-path: portaldata/${{ inputs.portal_name }}
+        download-path: customerportaldata/${{ inputs.portal_name }}
         website-id:  ${{ secrets.customer_website_id }} 
         overwrite: true
         
@@ -70,7 +70,7 @@ jobs:
           git status
           git pull origin
           git add portaldata
-          git commit -m "Added portaldata to branch"
+          git commit -m "Added customerportaldata to branch"
           git push
       env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -106,5 +106,5 @@ jobs:
         app-id: ${{ secrets.build_client_id }}
         client-secret: ${{ secrets.build_secrets_id }}
         tenant-id: ${{ secrets.build_tenant_id }} 
-        upload-path: portaldata/${{ inputs.portal_name }}
+        upload-path: customerportaldata/${{ inputs.portal_name }}
         

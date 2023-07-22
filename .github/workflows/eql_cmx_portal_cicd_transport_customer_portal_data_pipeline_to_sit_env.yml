@@ -56,7 +56,7 @@ jobs:
         app-id: ${{ secrets.build_client_id }}
         client-secret: ${{ secrets.build_secrets_id }}
         tenant-id: ${{ secrets.build_tenant_id }}
-        download-path: portaldata/${{ inputs.portal_name }}
+        download-path: customerportaldata/${{ inputs.portal_name }}
         website-id:  ${{ secrets.customer_website_id }} 
         overwrite: true
 
@@ -64,7 +64,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: build-portaldata
-        path: portaldata/${{ inputs.portal_name }}
+        path: customerportaldata/${{ inputs.portal_name }}
         
   upload-portal-data-to-sit-env:
     needs: [ download-customer-portal-data-from-build-env ]
@@ -82,7 +82,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         name: build-portaldata
-        path: portaldata/cmx-customer-portal
+        path: customerportaldata/cmx-customer-portal
 
     - name: Display List of Directories
       run: |
@@ -97,6 +97,6 @@ jobs:
         app-id: ${{ secrets.sit_client_id }}
         client-secret: ${{ secrets.sit_secrets_id }}
         tenant-id: ${{ secrets.sit_tenant_id }}
-        upload-path: portaldata/${{ inputs.portal_name }}
+        upload-path: customerportaldata/${{ inputs.portal_name }}
         website-id:  ${{ secrets.customer_website_id }} 
         overwrtte: true
